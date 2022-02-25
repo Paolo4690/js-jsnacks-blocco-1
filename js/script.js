@@ -114,3 +114,25 @@ btnSnack5.addEventListener('click', function() {
 
     resultSnack5.innerHTML = ('i numeri dispari chce hai inserito sono: ' + numeroSnack5);
 });
+
+
+// SNACK 6
+// Chiedi un numero di 4 cifre all’utente
+// e calcola la somma di tutte le cifre che compongono il numero.
+
+const input1Snack6 = document.querySelector('#input1-snack6');
+const btnSnack6 = document.querySelector('#btn-snack6');
+const resultSnack6 = document.querySelector('#result-snack6');
+
+btnSnack6.addEventListener('click', function() {
+    if (input1Snack6.value.length == 4) {
+        let arrNum = input1Snack6.value
+        let somma = 0;  
+
+        for (i = 0; i < arrNum.length; i++) {
+            somma += parseInt (arrNum[i])
+        }
+        resultSnack6.innerHTML = 'La somma dei 4 numeri è ' + somma;
+    }
+
+})
