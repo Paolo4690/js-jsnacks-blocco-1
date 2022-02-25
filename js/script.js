@@ -67,3 +67,28 @@ btnSnack3.addEventListener('click', function() {
 
 
 // SNACK 4
+// In un array sono contenuti i nomi degli invitati alla festa del grande
+// Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o  no alla festa.
+
+const input1Snack4 = document.querySelector('#input1-snack4');
+const btnSnack4 = document.querySelector('#btn-snack4');
+const resultSnack4 = document.querySelector('#result-snack4');
+
+const invitati = ['paolo', 'henry', 'mauro', 'gabriel', 'chiara'];
+
+btnSnack4.addEventListener('click', function() { 
+    let trovato = false;
+    for (let i = 0; i < invitati.length; i++) {
+    
+        if (invitati[i].toLowerCase() == input1Snack4.value.toLowerCase()) {
+            trovato = true;
+        }
+    }
+        
+    if (trovato) {
+        resultSnack4.innerHTML = ('Puoi entrare alla festa, perchè sei stato invitato');
+    } else {
+        resultSnack4.innerHTML = ('Non sei stato invitato alla festa, non puoi entrare');
+    }
+
+});
