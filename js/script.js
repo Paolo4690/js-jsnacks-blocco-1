@@ -1,6 +1,6 @@
-// SNACK 1
-// L’utente inserisce due numeri in successione, con due prompt.
-// Il software stampa il maggiore.
+/*SNACK 1
+L’utente inserisce due numeri in successione, con due prompt.
+Il software stampa il maggiore.*/
 
 const input1Snack1 = document.querySelector('#input1-snack1');
 const input2Snack1 = document.querySelector('#input2-snack1');
@@ -20,11 +20,9 @@ btnSnack1.addEventListener('click', function() {
     }
 })
 
-
-
-// SNACK 2
-// l'utente inserisce due parole in successione, con due prompt.
-// il software stampa prima la parola più corta, poi la parola più lunga.
+/* SNACK 2
+l'utente inserisce due parole in successione, con due prompt.
+il software stampa prima la parola più corta, poi la parola più lunga.*/
 
 const input1Snack2 = document.querySelector('#input1-snack2');
 const input2Snack2 = document.querySelector('#input2-snack2');
@@ -42,11 +40,9 @@ btnSnack2.addEventListener('click', function() {
 
 });
 
-
-
-// SNACK 3
-// Il software deve chiedere per 10 volte all’utente di inserire un numero.
-// Il programma stampa la somma di tutti i numeri inseriti.
+/* SNACK 3
+Il software deve chiedere per 10 volte all’utente di inserire un numero.
+Il programma stampa la somma di tutti i numeri inseriti.*/
 
 const btnSnack3 = document.querySelector('#btn-snack3');
 const resultSnack3 = document.querySelector('#result-snack3');
@@ -65,10 +61,9 @@ btnSnack3.addEventListener('click', function() {
     resultSnack3.innerHTML = 'La somma dei numeri è' + somma;
 });
 
-
-// SNACK 4
-// In un array sono contenuti i nomi degli invitati alla festa del grande
-// Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o  no alla festa.
+/* SNACK 4
+In un array sono contenuti i nomi degli invitati alla festa del grande
+Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o  no alla festa.*/
 
 const input1Snack4 = document.querySelector('#input1-snack4');
 const btnSnack4 = document.querySelector('#btn-snack4');
@@ -93,10 +88,10 @@ btnSnack4.addEventListener('click', function() {
 
 });
 
-// SNACK 5
-// Crea un array vuoto.
-// Chiedi per 6 volte all’utente di inserire un numero,
-// se è dispari inseriscilo nell’array.
+/* SNACK 5
+ Crea un array vuoto.
+ Chiedi per 6 volte all’utente di inserire un numero,
+se è dispari inseriscilo nell’array.*/
 
 const btnSnack5 = document.querySelector('#btn-snack5');
 const resultSnack5 = document.querySelector('#result-snack5');
@@ -115,10 +110,9 @@ btnSnack5.addEventListener('click', function() {
     resultSnack5.innerHTML = ('i numeri dispari chce hai inserito sono: ' + numeroSnack5);
 });
 
-
-// SNACK 6
-// Chiedi un numero di 4 cifre all’utente
-// e calcola la somma di tutte le cifre che compongono il numero.
+/* SNACK 6
+Chiedi un numero di 4 cifre all’utente
+e calcola la somma di tutte le cifre che compongono il numero.*/
 
 const input1Snack6 = document.querySelector('#input1-snack6');
 const btnSnack6 = document.querySelector('#btn-snack6');
@@ -135,4 +129,4 @@ btnSnack6.addEventListener('click', function() {
         resultSnack6.innerHTML = 'La somma dei 4 numeri è ' + somma;
     }
 
-})
+});
