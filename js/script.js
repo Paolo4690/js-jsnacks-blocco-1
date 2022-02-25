@@ -92,3 +92,25 @@ btnSnack4.addEventListener('click', function() {
     }
 
 });
+
+// SNACK 5
+// Crea un array vuoto.
+// Chiedi per 6 volte all’utente di inserire un numero,
+// se è dispari inseriscilo nell’array.
+
+const btnSnack5 = document.querySelector('#btn-snack5');
+const resultSnack5 = document.querySelector('#result-snack5');
+
+let numeroSnack5 = [] 
+
+btnSnack5.addEventListener('click', function() {   
+    for (let i = 0; i < 6; i++) {
+        let addNumber = parseInt(prompt('inserire un numero'));
+
+        if (addNumber % 2 !== 0) {
+        numeroSnack5.push(addNumber);
+        }
+    }
+
+    resultSnack5.innerHTML = ('i numeri dispari chce hai inserito sono: ' + numeroSnack5);
+});
