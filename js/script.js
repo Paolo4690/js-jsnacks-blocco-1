@@ -314,20 +314,50 @@ const mazzoDiCarte = [
   "Donna di Picche",
   "Re di Picche",
 ];
+
 btnCarte.addEventListener('click', function() {
     ulCarte.innerHTML = ''
     const carteMischiate = []
     let i = 0
     while (carteMischiate.length < mazzoDiCarte.length) {
         let random = Math.floor(Math.random() * mazzoDiCarte.length);
+
         if (!carteMischiate.includes(mazzoDiCarte[random])) {
             carteMischiate.push(mazzoDiCarte[random])
+
             let eleListItem = document.createElement('li')
             eleListItem.innerHTML = carteMischiate[i]
             ulCarte.append(eleListItem)
             i++
         }
-        
     }
+});
 
+
+/* Dato questo array di numeri unici da 1 a 30 in ordine casuale,
+crea un nuovo array con i numeri disposti in ordine crescente*/
+const btnArrayOrdinato  = document.querySelector('#btn-ordina-array');
+const disordinata = document.querySelector('#list-disordinata');
+const ordinata = document.querySelector('#list-ordinata');
+
+const numeriDisordinati = [29, 16, 27, 7, 19, 17, 30, 6, 3, 12, 9, 20, 25, 23,
+    26, 11, 21, 5, 1, 14, 4, 22, 8, 13, 15, 28, 24, 10, 2, 18];
+disordinata.innerHTML = numeriDisordinati
+const numeriOrdinati = [...numeriDisordinati]
+
+btnArrayOrdinato.addEventListener('click', function() {
+    let i = 0
+    while (i < numeriDisordinati.length) {
+        let j = 0
+        while (j < numeriOrdinati.length) {
+            if (numeriOrdinati[j] > numeriOrdinati[j + 1]) {
+                let temp = numeriOrdinati[j];
+                numeriOrdinati[j] = numeriOrdinati[j + 1];
+                numeriOrdinati[j + 1] = temp;
+            }
+            j++
+        }
+        i++
+    }
+    ordinata.innerHTML = numeriOrdinati
 });
