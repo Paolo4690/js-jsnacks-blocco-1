@@ -314,9 +314,10 @@ const mazzoDiCarte = [
   "Donna di Picche",
   "Re di Picche",
 ];
-const carteMischiate = []
-let i = 0
 btnCarte.addEventListener('click', function() {
+    ulCarte.innerHTML = ''
+    const carteMischiate = []
+    let i = 0
     while (carteMischiate.length < mazzoDiCarte.length) {
         let random = Math.floor(Math.random() * mazzoDiCarte.length);
         if (!carteMischiate.includes(mazzoDiCarte[random])) {
