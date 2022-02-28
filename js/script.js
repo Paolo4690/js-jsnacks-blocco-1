@@ -101,8 +101,8 @@ btnSnack4.addEventListener('click', function() {
 });
 
 /* SNACK 1.5
- Crea un array vuoto.
- Chiedi per 6 volte all’utente di inserire un numero,
+Crea un array vuoto.
+Chiedi per 6 volte all’utente di inserire un numero,
 se è dispari inseriscilo nell’array.*/
 
 const btnSnack5 = document.querySelector('#btn-snack5');
@@ -143,8 +143,8 @@ btnSnack6.addEventListener('click', function() {
 
 });
 
-// SNACK 1.9
-// Calcola la somma e la media dei primi 10 numeri.
+/* SNACK 1.9
+Calcola la somma e la media dei primi 10 numeri.*/
 const btnSnack9 = document.querySelector('#btn1-snack9');
 const btn2Snack9 = document.querySelector('#btn2-snack9');
 const resultSnack9 = document.querySelector('#result-snack9');
@@ -171,4 +171,32 @@ btn2Snack9.addEventListener('click', function() {
     }
     resultSnack9.innerHTML = `La Somma dei numeri inseriti è ${sommaSnack9}, <br>
     la media dei numeri inseriti è: ${sommaSnack9 / 10}`
+});
+
+
+/* SNACK 2.1
+Il software deve chiedere per 5 volte all’utente di inserire un numero.
+Il programma stampa la somma di tutti i numeri inseriti.*/
+const btnSnack2_1 = document.querySelector('#btn1-snack2-1');
+const btn2Snack2_1 = document.querySelector('#btn2-snack2-1');
+const resultSnack2_1 = document.querySelector('#result-snack2-1');
+// METODO FOR 
+btnSnack2_1.addEventListener('click', function() {
+    let somma = 0;
+    for (let i = 0; i < 5; i++) {
+        let addN = parseInt(prompt('inserire un numero'));
+        somma += addN;
+    }
+    resultSnack2_1.innerHTML = 'La somma dei numeri è ' + somma;
+});
+// METODO WHILE 
+btn2Snack2_1.addEventListener('click', function() {
+    let i = 0;
+    let somma = 0;
+    while ( i < 5) {
+        let addN = parseInt(prompt('inserire un numero'));
+        somma += addN
+        i++
+    }
+    resultSnack2_1.innerHTML = 'La somma dei numeri è ' + somma;
 });
