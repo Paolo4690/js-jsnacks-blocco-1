@@ -237,9 +237,8 @@ btnSnack2_3.addEventListener('click', function() {
     for (let i = 0; i < 3; i++) {
         let nomeRandom = Math.floor(Math.random() * nomi.length );
         let cognomeRandom = Math.floor(Math.random() * cognomi.length );
-        let falso = nomi[nomeRandom] + ' ' + cognomi[cognomeRandom]
         eleListItem = document.createElement('li')
-        eleListItem.innerHTML = falso
+        eleListItem.innerHTML = nomi[nomeRandom] + ' ' + cognomi[cognomeRandom]
         ulSnack2_3.append(eleListItem)
     }
 });
@@ -250,9 +249,8 @@ btn2Snack2_3.addEventListener('click', function() {
     while (i < 3) {
         let nomeRandom = Math.floor(Math.random() * nomi.length );
         let cognomeRandom = Math.floor(Math.random() * cognomi.length );
-        let falso = nomi[nomeRandom] + ' ' + cognomi[cognomeRandom]
         eleListItem = document.createElement('li')
-        eleListItem.innerHTML = falso
+        eleListItem.innerHTML = nomi[nomeRandom] + ' ' + cognomi[cognomeRandom]
         ulSnack2_3.append(eleListItem)
         i++
     }
