@@ -58,8 +58,20 @@ btnSnack3.addEventListener('click', function() {
     for (i = 0; i < numeri.length; i++) {
         somma += numeri[i]
     }
-    resultSnack3.innerHTML = 'La somma dei numeri è' + somma;
+    resultSnack3.innerHTML = 'La somma dei numeri è ' + somma;
 });
+// OPPURE SENZA ARRAY
+const btn2Snack3 = document.querySelector('#btn2-snack3');
+
+btn2Snack3.addEventListener('click', function() {
+    let somma = 0;
+    for (let i = 0; i < 10; i++) {
+        let addN = parseInt(prompt('inserire un numero'));
+        somma += addN;
+    }
+    resultSnack3.innerHTML = 'La somma dei numeri è ' + somma;
+});
+
 
 /* SNACK 4
 In un array sono contenuti i nomi degli invitati alla festa del grande
