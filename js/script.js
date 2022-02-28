@@ -218,3 +218,42 @@ btnSnack2_2.addEventListener('click', function() {
         resultSnack2_2.innerHTML = 'Il numero scelto è ' + numero;
     }
 });
+
+
+/* SNACK 2.3
+Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi,
+Gatsby vuole generare una falsa lista di 3 invitati.*/
+const btnSnack2_3 = document.querySelector('#btn-snack2-3');
+const btn2Snack2_3 = document.querySelector('#btn2-snack2-3');
+const resultSnack2_3 = document.querySelector('#result-snack2-3');
+const ulSnack2_3 = document.querySelector('#list-snack2-3');
+
+let nomi = ['Paolo', 'Stefano', 'Mauro', 'Gabriel', 'Chiara', 'Henri'];
+let cognomi =['Calafiore', 'Trovato', 'Constantinescu', 'Spanu', 'Passaro', 'Kapidani']
+let eleListItem = document.createElement('li')
+// METODO FOR 
+btnSnack2_3.addEventListener('click', function() {
+    ulSnack2_3.innerHTML = ''
+    for (let i = 0; i < 3; i++) {
+        let nomeRandom = Math.floor(Math.random() * nomi.length );
+        let cognomeRandom = Math.floor(Math.random() * cognomi.length );
+        let falso = nomi[nomeRandom] + ' ' + cognomi[cognomeRandom]
+        eleListItem = document.createElement('li')
+        eleListItem.innerHTML = falso
+        ulSnack2_3.append(eleListItem)
+    }
+});
+// METODO WHILE
+btn2Snack2_3.addEventListener('click', function() {
+    ulSnack2_3.innerHTML = ''
+    let i = 0
+    while (i < 3) {
+        let nomeRandom = Math.floor(Math.random() * nomi.length );
+        let cognomeRandom = Math.floor(Math.random() * cognomi.length );
+        let falso = nomi[nomeRandom] + ' ' + cognomi[cognomeRandom]
+        eleListItem = document.createElement('li')
+        eleListItem.innerHTML = falso
+        ulSnack2_3.append(eleListItem)
+        i++
+    }
+});
