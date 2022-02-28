@@ -200,3 +200,21 @@ btn2Snack2_1.addEventListener('click', function() {
     }
     resultSnack2_1.innerHTML = 'La somma dei numeri è ' + somma;
 });
+
+
+/* SNACK 2.2
+Inserisci un numero, se è pari stampa il numero,
+se è dispari stampa il numero successivo*/
+const btnSnack2_2 = document.querySelector('#btn-snack2-2');
+const resultSnack2_2 = document.querySelector('#result-snack2-2');
+
+btnSnack2_2.addEventListener('click', function() {
+    let numero = parseInt(prompt('inserire un numero'));
+
+    if (numero % 2 == 0) {
+        resultSnack2_2.innerHTML = 'Il numero scelto è ' + numero;
+    } else {
+        numero++
+        resultSnack2_2.innerHTML = 'Il numero scelto è ' + numero;
+    }
+});
