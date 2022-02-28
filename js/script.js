@@ -230,7 +230,6 @@ const ulSnack2_3 = document.querySelector('#list-snack2-3');
 
 let nomi = ['Paolo', 'Stefano', 'Mauro', 'Gabriel', 'Chiara', 'Henri'];
 let cognomi =['Calafiore', 'Trovato', 'Constantinescu', 'Spanu', 'Passaro', 'Kapidani']
-let eleListItem = document.createElement('li')
 // METODO FOR 
 btnSnack2_3.addEventListener('click', function() {
     ulSnack2_3.innerHTML = ''
@@ -254,4 +253,80 @@ btn2Snack2_3.addEventListener('click', function() {
         ulSnack2_3.append(eleListItem)
         i++
     }
+});
+
+
+// MISCHIA UN MAZZO DI CARTE 
+const btnCarte  = document.querySelector('#btn-carte');
+const resultCarte = document.querySelector('#result-carte');
+const ulCarte = document.querySelector('#list-carte');
+const mazzoDiCarte = [
+	"Asso di Cuori",
+  "2 di Cuori",
+  "3 di Cuori",
+  "4 di Cuori",
+  "5 di Cuori",
+  "6 di Cuori",
+  "7 di Cuori",
+  "8 di Cuori",
+  "9 di Cuori",
+  "10 di Cuori",
+  "Jack di Cuori",
+  "Donna di Cuori",
+  "Re di Cuori",
+	"Asso di Quadri",
+  "2 di Quadri",
+  "3 di Quadri",
+  "4 di Quadri",
+  "5 di Quadri",
+  "6 di Quadri",
+  "7 di Quadri",
+  "8 di Quadri",
+  "9 di Quadri",
+  "10 di Quadri",
+  "Jack di Quadri",
+  "Donna di Quadri",
+  "Re di Quadri",
+	"Asso di Fiori",
+  "2 di Fiori",
+  "3 di Fiori",
+  "4 di Fiori",
+  "5 di Fiori",
+  "6 di Fiori",
+  "7 di Fiori",
+  "8 di Fiori",
+  "9 di Fiori",
+  "10 di Fiori",
+  "Jack di Fiori",
+  "Donna di Fiori",
+  "Re di Fiori",
+  "Asso di Picche",
+  "2 di Picche",
+  "3 di Picche",
+  "4 di Picche",
+  "5 di Picche",
+  "6 di Picche",
+  "7 di Picche",
+  "8 di Picche",
+  "9 di Picche",
+  "10 di Picche",
+  "Jack di Picche",
+  "Donna di Picche",
+  "Re di Picche",
+];
+const carteMischiate = []
+let i = 0
+btnCarte.addEventListener('click', function() {
+    while (carteMischiate.length < mazzoDiCarte.length) {
+        let random = Math.floor(Math.random() * mazzoDiCarte.length);
+        if (!carteMischiate.includes(mazzoDiCarte[random])) {
+            carteMischiate.push(mazzoDiCarte[random])
+            let eleListItem = document.createElement('li')
+            eleListItem.innerHTML = carteMischiate[i]
+            ulCarte.append(eleListItem)
+            i++
+        }
+        
+    }
+
 });
